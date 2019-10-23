@@ -13,14 +13,19 @@ public class Main {
                 counter++;
 
             } else if( dice1 == dice2 ) {
-                System.out.println("User Rolled " + dice1 + " & " + dice2);
-                System.out.println("User moves " + sum + " spaces and goes again ");
                 counter++;
+                if(counter == 3 ) {
+                    System.out.println("User Rolled " + dice1 + " & " + dice2);
+                    System.out.println("GO TO JAIL!");
+                } else {
+                    System.out.println("User Rolled " + dice1 + " & " + dice2);
+                    System.out.println("User moves " + sum + " spaces and goes again ");
+                    dice1 = (int) (Math.random() * 6) + 1;
+                    dice2 = (int) (Math.random() * 6) + 1;
+                }
             }
 
-            if(counter >= 3 ) {
-                System.out.println("GO TO JAIL!");
-            }
+
         }
 
 
